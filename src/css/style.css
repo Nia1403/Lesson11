@@ -30,10 +30,10 @@ padding-bottom: 20%;
 
 nav{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     margin: auto;
-
 }
 
 nav ul{
@@ -88,7 +88,6 @@ section .container{
 }
 
 
-
 .firstArea{
     margin-top: -15%;
     /* display: flex; */
@@ -117,16 +116,70 @@ section .container{
 }
 
 .secondArea img{
-    width: 19%;
+    max-width: 19%;
     height: auto;
 }
 
 .paragraphs{
     display: flex;
-
     flex-direction: column;
     flex-wrap: wrap;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 40px 200px;
     gap: 10px;
 }
+
+.paragraphs p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #171717;
+}
+
+/* 768    mobile */
+/* 768-1024 tablet */
+/* 1024   desktop */
+/* @media(max-width: 1024px){
+} */
+
+
+	/* styles for tablet */
+/* @media (min-width: 768px) and (max-width: 1024px) {
+
+    header nav{
+        display: none;
+    }
+} 
+ */
+
+ @media (width < 768px){
+    header nav ul{
+        display: none;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .inside{
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 0%;
+        padding: 0%;
+    }
+    .secondArea{
+        flex-wrap: nowrap;
+    }
+    .paragraphs{
+        justify-content: center;
+        margin: 0;
+        padding: 0%;
+    }
+
+    .paragraphs p:nth-child(2),
+    .paragraphs p:nth-child(3){
+        display: none;
+    }
+
+ }
+
+
